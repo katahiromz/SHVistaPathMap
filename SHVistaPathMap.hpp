@@ -32,7 +32,6 @@ public:
         m_from_localized.clear();
 
         WCHAR szPath[MAX_PATH], szLocalized[MAX_PATH];
-        CHAR szAnsi[MAX_PATH];
         for (INT csidl = 0; csidl < 0x40; ++csidl)
         {
             if (!SHGetSpecialFolderPathW(hwnd, szPath, csidl, FALSE))
