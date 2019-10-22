@@ -1,5 +1,5 @@
 #ifndef SHVISTAPATHMAP_HPP_
-#define SHVISTAPATHMAP_HPP_     1   // Version 1
+#define SHVISTAPATHMAP_HPP_     2   // Version 2
 
 #ifndef _INC_WINDOWS
     #include <windows.h>
@@ -21,7 +21,7 @@ public:
     {
     }
 
-    SHVistaPathMap(HWND hwnd)
+    explicit SHVistaPathMap(HWND hwnd)
     {
         init(hwnd);
     }
