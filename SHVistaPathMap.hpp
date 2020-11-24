@@ -45,7 +45,7 @@ public:
 
             ExpandEnvironmentStringsW(szMod, szExpanded, ARRAYSIZE(szExpanded));
 
-            if (HMODULE hMod = LoadLibraryW(szExpanded))
+            if (HMODULE hMod = LoadLibraryExW(szExpanded, NULL, LOAD_LIBRARY_AS_DATAFILE))
             {
                 if (LoadStringW(hMod, nResID, szLocalized, ARRAYSIZE(szLocalized)))
                 {
